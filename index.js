@@ -203,4 +203,4 @@ client.on('guildMemberAdd', member => {
     client.channels.cache.get('756211425038565386').send(embed);
 });
 
-client.login("NTkzMTI4NDU0NDU1NTU4MTU0.XRJX6w.g49C9VNn74r0jV9vCcqYhV7MCL0");
+client.login("NTkzMTI4NDU0NDU1NTU4MTU0.XRJX6w.EK6yJtl6PKAu3OyHyYv5V1DgleY");
