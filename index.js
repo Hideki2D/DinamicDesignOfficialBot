@@ -194,9 +194,9 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
     var guild = member.guild;
     var embed = new Discord.MessageEmbed()
-    .setTitle(Привет ${member.displayName}!)
+    .setTitle(`Привет ${member.displayName}!`)
     .setColor('#bbff00')
-    .setDescription(Добро пожаловать на ${guild.name}. Присаживайся и отдыхай от суеты. Нужна помощь? Напиши ~help и вам будет предоставлена помощь!)
+    .setDescription(`Добро пожаловать на ${guild.name}. Присаживайся и отдыхай от суеты. Нужна помощь? Напиши ~help и вам будет предоставлена помощь!`)
     .setFooter(ID:${member.id} Зарегистрировался: ${member.user.createdAt}, "https://i.imgur.com/FJn0EDJ.png%22%22")
     .setImage("https://i.imgur.com/5GQsVsX.png%22%22")
     .setThumbnail("https://i.imgur.com/I7YKt8M.png")
