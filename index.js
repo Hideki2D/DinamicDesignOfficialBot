@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { Menu } = require('discord.js-menu');
+const Menu = require('discord.js-menu');
 const ms = require('ms')
 const queue = new Map();
 
