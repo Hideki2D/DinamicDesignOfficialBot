@@ -6,7 +6,7 @@ const queue = new Map();
 
 //Подключение префикса, emoji//
 
-const prefix = ".";
+const prefix = "~";
 const emoji_guild = "598910972429729832";
 const guildmode = false;
 
@@ -98,11 +98,11 @@ client.on('message', message => {
                     description: "Команды:",
                     fields: [
                         {
-                            name: "ban",
+                            name: "~ban",
                             value: "Банит выбраного пользователя!",
                         },
 						{
-							name: "kick",
+							name: "~kick",
 							value: "Кикает выбраного пользователя!",
 						},
                     ]
@@ -120,7 +120,7 @@ client.on('message', message => {
                     description: "Команды:",
                     fields: [
                         {
-                            name: "Ава",
+                            name: "~Ава",
                             value: "Даёт ссылку на вашу автарку!"
                         },
                     ]
@@ -140,7 +140,7 @@ client.on('message', message => {
                     description: "Команды:",
                     fields: [
                         {
-                            name: ".Мне нужна поддержка",
+                            name: "~Мне нужна поддержка",
                             value: "Это поможет вам остаться замеченным!"
                         },
                     ]
@@ -187,6 +187,20 @@ client.on('message', message => {
 	if (message.content === prefix + "мне нужна поддержка") {
 		message.reply("Здравствуйте скоро к вам придёт поддержка ждите!");
   }
+});
+
+//Функция приветствия
+
+client.on('guildMemberAdd', member => {
+    var guild = member.guild;
+    var embed = new Discord.MessageEmbed()
+    .setTitle(Привет ${member.displayName}!)
+    .setColor('#bbff00')
+    .setDescription(Добро пожаловать на ${guild.name}. Присаживайся и отдыхай от суеты. Нужна помощь? Напиши ~help и вам будет предоставлена помощь!)
+    .setFooter(ID:${member.id} Зарегистрировался: ${member.user.createdAt}, "https://i.imgur.com/FJn0EDJ.png%22%22")
+    .setImage("https://i.imgur.com/5GQsVsX.png%22%22")
+    .setThumbnail("https://i.imgur.com/I7YKt8M.png")
+    client.channels.cache.get('756211425038565386').send(embed);
 });
 
 client.login("NTkzMTI4NDU0NDU1NTU4MTU0.XRJX6w.g49C9VNn74r0jV9vCcqYhV7MCL0");
